@@ -73,6 +73,7 @@ h6{
 h3{
 	color: #188989;
 	font-size: 2.2rem;
+	margin-top: 0.6rem;
 }
 
 h5{
@@ -148,6 +149,9 @@ input:focus{
 	color: #50b7b1 !important;
 }
 
+.d-date-time-button a:first-child{
+	display:none !important;
+}
 /*.toChange1-enter-to, .toChange1-leave, .toChange2-enter-to, .toChange2-leave, .toChange3-enter-to, .toChange3-leave{
 	opacity: 0.5;
 }*/
