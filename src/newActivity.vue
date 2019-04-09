@@ -170,22 +170,33 @@ export default {
           (this.btn = false),
           (this.btns = true);
       } else if (this.divindex > 3) {
-        var url = "";
-        this.$ajax
-          .post(url, {
-            name: this.name,
-            direction: this.direction,
-            telephone: this.telephone,
-            title: this.title,
-            mark: this.mark,
-            location: this.location,
-            start: this.start,
-            end: this.end
-          })
-          .catch(err => {
-            console.log(err);
-          });
-        (this.unsubmit = false), (this.submitted = true);
+        if (this.end != 0 && this.end < this.start) {
+          alert("结束时间必须大于开始时间！请重新选择！");
+          return false;
+        } else if (this.start == 0) {
+          alert("请选择开始时间！");
+          return false;
+        } else if (this.end == 0) {
+          alert("请选择结束时间！");
+          return false;
+        } else {
+          var url = "";
+          this.$ajax
+            .post(url, {
+              name: this.name,
+              direction: this.direction,
+              telephone: this.telephone,
+              title: this.title,
+              mark: this.mark,
+              location: this.location,
+              start: this.start,
+              end: this.end
+            })
+            .catch(err => {
+              console.log(err);
+            });
+          (this.unsubmit = false), (this.submitted = true);
+        }
       }
     },
     priorclick() {},
