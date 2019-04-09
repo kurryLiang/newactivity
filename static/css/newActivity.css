@@ -137,6 +137,13 @@ input:focus{
 	height: 100%;
 }
 
+.ok{
+	position: absolute;
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+}
+
 .toChange1-enter-active, .toChange1-leave-active, .toChange2-enter-active, .toChange2-leave-active, .toChange3-enter-active, .toChange3-leave-active{
 	transition: opacity 0.5s;
 }
